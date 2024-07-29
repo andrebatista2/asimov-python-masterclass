@@ -1,0 +1,11 @@
+services:
+  masterclass-py:
+    container_name: masterclass
+    restart: on-failure
+    image: masterclass-py
+    working_dir: /app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8001:8001'
